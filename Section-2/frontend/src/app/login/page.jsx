@@ -1,10 +1,13 @@
 'use client';
 import axios from 'axios';
 import { useFormik } from 'formik';
+import { useRouter } from 'next/navigation';
 import React from 'react'
 import toast from 'react-hot-toast';
 
 const Login = () => {
+
+    const router = useRouter();
 
     const loginForm = useFormik({
         initialValues: {
@@ -19,7 +22,7 @@ const Login = () => {
                     toast.success('Login successful');
                     // console.log(result.data);
                     localStorage.setItem('userToken', result.data.token);
-                    
+                    router.push('/');
                 }).catch((err) => {
                     toast.error('Login failed');
                     console.log(err);
