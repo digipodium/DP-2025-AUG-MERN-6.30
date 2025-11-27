@@ -12,6 +12,7 @@
     "@tabler/icons-react": "^3.35.0",
     "axios": "^1.13.2",
     "formik": "^2.4.6",
+    "motion": "^12.23.24",
     "next": "15.5.5",
     "react": "19.1.0",
     "react-dom": "19.1.0",
